@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     ansiColor('xterm') {
-                        //sh "mvn clean install"
+                        sh "mvn clean install"
                         sh "mvn apigee-config:caches -Ptest -Dapigee.config.options=update -Dapigee.config.dir=apigee-config/samples/EdgeConfig/resources/edge/"
                         echo "Inside deploy stage"
                     }
@@ -37,7 +37,7 @@ pipeline {
             }
         }
 
-		/*stage ('Unit Test and Build') {
+	stage ('Unit Test and Build') {
             steps {
                 script {
                     ansiColor('xterm') {
@@ -47,5 +47,5 @@ pipeline {
                 }
             }
         }
-    }
+	}
 }
