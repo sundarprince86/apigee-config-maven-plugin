@@ -1,4 +1,4 @@
-@Library('slackNotifications-shared-library@master') _
+@Library('jenkins-shared-library') _
 pipeline {
     agent any
     options {
